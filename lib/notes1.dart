@@ -11,21 +11,24 @@ class _Notes1State extends  State<Notes1> {
   final xyz=TextEditingController();
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        appBar: AppBar(
-            leading: IconButton(
-      icon: Icon(Icons.arrow_back),
-      onPressed: () {
-        Navigator.pop(context);
-      },
-      
-    ),
-    backgroundColor: Colors.black12,
-    ),
-    body:Column(
-      children: [
-        SizedBox(height:200,child: TextField(
-          controller: xyz,
+    var n1;
+        return Scaffold(
+            appBar: AppBar(
+                leading: IconButton(
+          icon: Icon(Icons.arrow_back),
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          
+        ),
+        backgroundColor: Colors.black12,
+        ),
+        body:Column(
+          children: [
+            SizedBox(height:200,child: TextField(
+              decoration: InputDecoration(hintText: n1.str),
+              controller: xyz,
+              
 
         )),
         Padding(padding: EdgeInsets.only(top:30),
